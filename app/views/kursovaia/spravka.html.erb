@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+        
+        @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+        
+        @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+        
+        /* ---------- FONTAWESOME ---------- */
+        
+        [class*="fontawesome-"]:before {
+        font-family: 'FontAwesome', sans-serif;
+        }
+        
+        /* ---------- GENERAL ---------- */
+        
+        body {
+            background-color: white;
+            color: #606468;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+        
+        a {
+            color: #eee;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        input {
+            border: none;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5em;
+            padding: 0;
+            -webkit-appearance: none;
+        }
+        
+        p {
+            line-height: 1.5em;
+        }
+        
+        .clearfix { *zoom: 1; } /* For IE 6/7 */
+        .clearfix:before, .clearfix:after {
+            display: table;
+            content: "";
+        }
+        .clearfix:after { clear: both; }
+        
+        /* ---------- LOGIN ---------- */
+        
+        #login {
+            margin: 150px auto;
+            width: 280px;
+        }
+        
+        #login form span {
+            background-color: #363b41;
+            border-radius: 3px 0px 0px 3px;
+            -moz-border-radius: 3px 0px 0px 3px;
+            -webkit-border-radius: 3px 0px 0px 3px;
+            color: #606468;
+            display: block;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            width: 50px;
+        }
+        
+        #login form input {
+            height: 50px;
+            outline:none;
+        }
+        
+        #login form input[type="text"], input[type="password"] {
+            background-color: #3b4148;
+            border-radius: 0px 3px 3px 0px;
+            -moz-border-radius: 0px 3px 3px 0px;
+            -webkit-border-radius: 0px 3px 3px 0px;
+            color: #606468;
+            margin-bottom: 1em;
+            padding: 0 16px;
+            width: 198px;
+        }
+        
+        #login form input:focus {
+            color:#fff;
+        }
+        
+        #login form input[type="submit"] {
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            background-color: #0000ff;
+            color: #eee;
+            font-weight: bold;
+            margin-bottom: 2em;
+            text-transform: uppercase;
+            cursor:pointer;
+            width: 280px;
+        }
+        
+        .bar {
+            border-radius: 3px;
+            color: #eee;
+            font-weight: bold;
+            margin-bottom: 2em;
+            text-transform: uppercase;
+            width: 280px;
+        }
+        
+        #login form input[type="submit"]:hover {
+            background-color: #000080;
+        }
+        
+        #login > p {
+            text-align: center;
+        }
+        
+        #login > p span {
+            padding-left: 5px;
+        }
+        
+    
+      .bg {
+        background-color: #2c3338;
+      }
+      .pos1 {
+        position: relative;
+        right: 30px;
+      }
+      .pos2 {
+        position: relative;
+        bottom:  10px;
+      }
+      .pos3 {
+        position: relative;
+        right:  60px;
+      }
+      .pos4 {
+        position: relative;
+        right: 50px;
+      }
+      .pos5 {
+        position: relative;
+        bottom: 5px;
+      }
+      .pos6 {
+        position: relative;
+        left: 10px;
+      }
+      .pos7 {
+        position: relative;
+        left: 20px;
+      }
+      .pos8 {
+        position: relative;
+        right: 80px;
+      }
+      .my-primary {
+        background-color: darkcyan;
+        color: white;
+      }
+      main {
+      margin-top: 15px;
+      padding-top: 10px ;
+      }
+      html {
+          position: relative;
+          min-height: 100%;
+      }
+      body {
+          margin-bottom: 40px;
+      }
+      footer {
+          height: 40px;
+          position: absolute;
+          bottom: 0;
+          width: 100%;   
+      }
+      #connect{
+          position: relative;
+          left: 45px;
+      }
+      #connect1{
+          position:  absolute;
+          top: 130px;
+          left: 75px;
+          font: 18pt sans-serif;
+          border: 3px solid darkcyan;
+          width: 340px;
+          height: 45px;
+          background-color: lightblue;
+      }
+      .padd{
+          position: relative;
+          left: 30px;
+          padding: 5px;
+      }
+      table, th, tr, td
+      {
+          border:   1px solid black;
+          text-align: center;
+          margin:  auto;
+      }
+      .padding {
+        padding: 5px;
+      }
+      .paddingtop {
+        padding-top: 10px;
+      }
+      .shrift {
+        font-size: 1.1em;
+        font: Times New Roman;
+        text-color: #2c3338;
+        text-align: center;
+        white-space: nowrap;
+      }
+       
+      .nowrap {
+        white-space: nowrap;
+      }
+      .right {
+        text-align: right;
+      }
+      .left {
+        text-align: left;
+      }  
+    </style>
+
+  </head>
+  <body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white flex-column flex-sm-row bd-navbar sticky-top bg" >
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div><p class="alert alert-primary text-primary font-weight-bold" > <%= I18n.t('kursovaia.spravka.per_acc') %> </p></div>           
+        <div class="btn-group mr-auto">
+        </div>
+        <%= form_with url: send_spravka_path do |f|%>
+          <%= f.submit "#{I18n.t('kursovaia.spravka.send')}", class: "btn btn-outline-primary pos2 pos8"%>
+        <% end %>
+
+        <%= link_to "#{I18n.t('kursovaia.spravka.acc')}", view_path, class: "btn btn-outline-primary pos2 pos3" %>
+       
+        <span id="current_date_time_block" class="alert alert-primary text-primary mt pos1" > </span>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle pos2" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= I18n.t("kursovaia.spravka.ch_lan") %>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-sm">
+            <% I18n.available_locales.each do |locale|%>
+              <li>
+                <%= link_to t(locale), spravka_path(locale: locale), class: 'dropdown-item', type: 'button' %>
+              </li>
+            <% end %>
+          </ul>
+        </div>       
+      </div>
+    </nav>
+
+    <script type="text/javascript">
+      
+      /* функция добавления ведущих нулей */
+      /* (если число меньше десяти, перед числом добавляем ноль) */
+      function zero_first_format(value)
+      {
+          if (value < 10)
+          {
+              value='0'+value;
+          }
+          return value;
+      }
+
+      /* функция получения текущей даты и времени */
+      function date_time()
+      {
+          var current_datetime = new Date();
+          var day = zero_first_format(current_datetime.getDate());
+          var month = zero_first_format(current_datetime.getMonth()+1);
+          var year = current_datetime.getFullYear();
+          var hours = zero_first_format(current_datetime.getHours());
+          var minutes = zero_first_format(current_datetime.getMinutes());
+          var seconds = zero_first_format(current_datetime.getSeconds());
+
+          return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+      }
+
+      /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+      setInterval(function () {
+        document.getElementById('current_date_time_block').innerHTML = date_time();
+      }, 1000);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  </header>
+  <!-- <main></main> -->
+  <main class="container" role="main">
+
+      
+      <div class="row">
+        <div class="col-3"> </div>
+
+        <div class="col-6 badge bg-primary text-wrap fs-3 bar"> 
+          
+           <font size="3px" color="white"> <%= I18n.t('kursovaia.spravka.sprav') %> </font>
+
+        </div>
+
+        <div class="col-3"> </div>  
+      </div>
+      <div class="row">
+        
+        <div class="col-2"> </div>
+        <div class="col-8 shrift padding">
+         
+            <p >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspВыдана гражданину <ins><%= $foo.LastName%>&nbsp<%=$foo.FirstName%>&nbsp<%=$foo.Patronymic%></ins> в том, что он поступил &nbspимея среднее общее</p>
+            <p class="right">образование, в &nbsp МГТУ им Н.Э. Баумана по имеющей государственную аккредетацию образовательной</p>
+            <p class="left">&nbsp&nbspпрограмме высшего образования, кафедра <ins><%=$foo.FacultyName%></ins>. </p>
+            <p class="right">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspВ &nbspнастоящее &nbspвремя &nbspобучается &nbspна &nbsp&nbsp<ins><%= ( ($foo.GroupName)[0].to_i / 2 + ($foo.GroupName)[0].to_i % 2 )%></ins> &nbsp&nbspкурсе, группа <ins><%=$foo.FacultyName%>-<%=$foo.GroupName%></ins> по  очной  форме обучения. Срок </p>
+            <p class="right">получения &nbsp&nbspобразования &nbspпо &nbspобразовательной &nbspпрограмме &nbsp&nbspсоставляет &nbsp4 &nbspгода. &nbspОкончание &nbspобучения</p>
+            <div class="left">&nbsp&nbsp31 августа  &nbsp<ins>2024</ins> &nbspгода. Справка выдана по причине <ins>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</ins>. </div>
+    
+        </div>
+        <div class="col-2"> </div>
+      </div>
+      <div class="row padding"> </div>
+      <div class="row padding"> </div>
+      <div class="row padding"> </div>
+      <div class="row padding"> </div>  
+      <div class="row"> 
+        <div class="col-2"> </div>
+        <div class="col-8 shrift padding">
+          <p> Руководитель образовательной организации &nbsp&nbsp&nbsp&nbsp     <ins>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</ins>            /Падалкин Б.В./ </ins> </p>
+        </div>
+        <div class="col-2"> </div>
+      </div>
+  </main>
+  </body>
+</html>

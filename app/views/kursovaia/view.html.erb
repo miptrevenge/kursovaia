@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+    <style>
+      
+    @charset "utf-8";
+/* CSS Document */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+/* ---------- FONTAWESOME ---------- */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* ---------- GENERAL ---------- */
+
+body {
+	background-color: white;
+	color: #606468;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+a {
+	color: #eee;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input {
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LOGIN ---------- */
+
+#login {
+	margin: 150px auto;
+	width: 280px;
+}
+
+#login form span {
+	background-color: #363b41;
+	border-radius: 3px 0px 0px 3px;
+	-moz-border-radius: 3px 0px 0px 3px;
+	-webkit-border-radius: 3px 0px 0px 3px;
+	color: #606468;
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+}
+
+#login form input {
+	height: 50px;
+	outline:none;
+}
+
+#login form input[type="text"], input[type="password"] {
+	background-color: #3b4148;
+	border-radius: 0px 3px 3px 0px;
+	-moz-border-radius: 0px 3px 3px 0px;
+	-webkit-border-radius: 0px 3px 3px 0px;
+	color: #606468;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 198px;
+}
+
+#login form input:focus {
+	color:#fff;
+}
+
+#login form input[type="submit"] {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #0000ff;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 2em;
+	text-transform: uppercase;
+	cursor:pointer;
+	width: 280px;
+}
+
+.bar {
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 2em;
+	text-transform: uppercase;
+	width: 280px;
+}
+
+#login form input[type="submit"]:hover {
+	background-color: white;
+}
+
+#login > p {
+	text-align: center;
+}
+
+#login > p span {
+	padding-left: 5px;
+}
+
+
+      .bg {
+        background-color: #2c3338;
+      }
+      .pos1 {
+        position: relative;
+        right: 60px;
+      }
+      .pos2 {
+        position: relative;
+        bottom:  10px;
+      }
+      .pos3 {
+        position: relative;
+        right:  30px;
+      }
+      .pos4 {
+        position: relative;
+        right: 50px;
+      }
+      .pos5 {
+        position: relative;
+        bottom: 5px;
+      }
+      .pos6 {
+        position: relative;
+        left: 10px;
+      }
+      .pos7 {
+        position: relative;
+        left: 20px;
+      }
+      main {
+      margin-top: 15px;
+      padding-top: 10px ;
+      }
+      html {
+          position: relative;
+          min-height: 100%;
+      }
+      body {
+          margin-bottom: 40px;
+      }
+      #connect{
+          position: relative;
+          left: 45px;
+      }
+      .padd{
+          position: relative;
+          left: 30px;
+          padding: 5px;
+      }
+      table, th, tr, td
+      {
+          border:   1px solid black;
+          text-align: center;
+
+      }
+      .padding {
+        padding: 5px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white flex-column flex-sm-row bd-navbar sticky-top bg" >
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div><p class="alert alert-primary text-primary font-weight-bold" > <%= I18n.t('kursovaia.view.per_acc') %> </p></div>           
+        <div class="btn-group mr-auto">
+        </div>
+        
+        <span id="current_date_time_block" class="alert alert-primary text-primary mt pos1" > </span>
+        
+        <%= link_to "#{ I18n.t('kursovaia.view.exit') }", input_path,  class: "btn btn-outline-primary pos2 pos3" %>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle pos2" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= I18n.t("kursovaia.view.ch_lan") %>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-sm">
+            <% I18n.available_locales.each do |locale|%>
+              <li>
+                <%= link_to t(locale), view_path(locale: locale), class: 'dropdown-item', type: 'button' %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>         
+      </div>
+    </nav>
+
+    <script type="text/javascript">
+      
+      /* функция добавления ведущих нулей */
+      /* (если число меньше десяти, перед числом добавляем ноль) */
+      function zero_first_format(value)
+      {
+          if (value < 10)
+          {
+              value='0'+value;
+          }
+          return value;
+      }
+
+      /* функция получения текущей даты и времени */
+      function date_time()
+      {
+          var current_datetime = new Date();
+          var day = zero_first_format(current_datetime.getDate());
+          var month = zero_first_format(current_datetime.getMonth()+1);
+          var year = current_datetime.getFullYear();
+          var hours = zero_first_format(current_datetime.getHours());
+          var minutes = zero_first_format(current_datetime.getMinutes());
+          var seconds = zero_first_format(current_datetime.getSeconds());
+
+          return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+      }
+
+      /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+      setInterval(function () {
+        document.getElementById('current_date_time_block').innerHTML = date_time();
+      }, 1000);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  </header>
+
+  <!-- <main></main> -->
+  <main class="container" role="main">
+      <div class="row padding"> </div>
+      
+      <div class="row">
+          <div class="col-4 badge bg-primary text-wrap fs-3 bar">
+                  <font size="3px" color="white"><%= $foo.LastName%>&nbsp<%=$foo.FirstName%>&nbsp<%=$foo.Patronymic%> </font>
+        
+          </div>
+          <div class="col-4">
+          </div>
+          <div class="col-3 badge bg-primary text-wrap fs-3 bar pos4">
+                  <font size="3px" color="white"> <%= I18n.t('kursovaia.view.mark') %> </font>
+          </div>
+          <div class="col-1"> </div>
+          
+      </div>
+      <div class="row">
+          <div class="col-5">
+              <div id="connect">
+                  <%= image_tag("/assets/#{$foo.LastName}_#{$foo.FirstName}_#{$foo.Patronymic}.jpg", height: '350', width: '250') %>
+                
+              </div>
+          </div>
+          <div class="col-1"> </div> 
+          <div class="col-6">
+              <table>
+              <tr>
+                  <td style="color:#2c3338;" width="70%" class="w-30 p-2 font-weight-bold"> <%= I18n.t('kursovaia.view.sub') %> </td>
+                  <td style="color:#2c3338;" width="20%" class="w-30 p-2 font-weight-bold"> <%= I18n.t('kursovaia.view.eva') %> </td>
+              </tr>
+             
+              <% @subjects.each do |subject| %>
+                <% if (subject.student_id == $foo.id)%>
+                  <% if ((subject.Evaluation == "Неудовлетворительно") or (subject.Evaluation == "Не зачтено") or (subject.Evaluation == "Не аттестован")) %>
+                    <tr>
+                      <td style="color:#2c3338;" class="w-30 p-2"> <%= subject.SubjectName %></td>
+                      <td style="color:#ff0000;" class="w-30 p-2"> <%= subject.Evaluation %></td>
+                    </tr>
+                  <% elsif (subject.Evaluation == "Удовлетворительно") %>
+                    <tr>
+                      <td style="color:#2c3338;" class="w-30 p-2"> <%= subject.SubjectName %></td>
+                      <td style="color:#b07d2b;"> <%= subject.Evaluation %></td>
+                    </tr>
+                  <% elsif ((subject.Evaluation == "Хорошо") or (subject.Evaluation == "Зачтено")) %>
+                    <tr>
+                      <td style="color:#2c3338;" class="w-30 p-2"> <%= subject.SubjectName %></td>
+                      <td style="color:#00ff00;"> <%= subject.Evaluation %></td>
+                    </tr>
+                  <% else (subject.Evaluation == "Отлично") %>
+                    <tr>
+                      <td style="color:#2c3338;" class="w-30 p-2"> <%= subject.SubjectName %></td>
+                      <td style="color:#008000"> <%= subject.Evaluation %></td>
+                    </tr>
+                  <% end %>
+                <% end %>
+              <% end %>
+              
+              
+              </table>      
+          </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-4 badge bg-primary text-wrap fs-3 bar">
+          <font size="3px" color="white"> <%= I18n.t('kursovaia.view.group') %>&nbsp<%=$foo.FacultyName%>-<%=$foo.GroupName%></font>
+        </div>
+        <div class="col-2"> </div>
+        <div class="col-3 badge bg-primary text-wrap fs-3 bar">
+          <font size="3px" color="white"> <%= I18n.t('kursovaia.view.ch_doc') %></font>
+        </div>
+        <div class="col-3">
+          <% if ( ((@array.include?("Не аттестован")) or (@array.include?("Неудовлетворительно")) or (@array.include?("Не зачтено"))) )  %>
+            <%= link_to "#{ I18n.t('kursovaia.view.naprava') }", naprava_path, class: "btn btn-sm btn-outline-primary pos5" %>
+          <% else %>
+            <%= link_to "#{ I18n.t('kursovaia.view.naprava') }", naprava_path, class: "btn btn-sm btn-outline-primary pos5 disabled" %>
+          <% end %>
+
+            <%= link_to "#{ I18n.t('kursovaia.view.otchet') }", otchet_path, class: "btn btn-sm btn-outline-primary pos5 pos6" %>
+            
+            <%= link_to "#{ I18n.t('kursovaia.view.spravka') }", spravka_path, class: "btn btn-sm btn-outline-primary pos5 pos7" %>
+            
+        </div> 
+
+      </div>
+
+  </main>
+  </body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+    <style>
+    @charset "utf-8";
+    /* CSS Document */
+    
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+    
+    @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+    
+    /* ---------- FONTAWESOME ---------- */
+    
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+    
+    /* ---------- GENERAL ---------- */
+    
+    body {
+        background-color: white;
+        color: #606468;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+    
+    a {
+        color: #eee;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    input {
+        border: none;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5em;
+        padding: 0;
+        -webkit-appearance: none;
+    }
+    
+    p {
+        line-height: 1.5em;
+    }
+    
+    .clearfix { *zoom: 1; } /* For IE 6/7 */
+    .clearfix:before, .clearfix:after {
+        display: table;
+        content: "";
+    }
+    .clearfix:after { clear: both; }
+    
+    /* ---------- LOGIN ---------- */
+    
+    #login {
+        margin: 150px auto;
+        width: 280px;
+    }
+    
+    #login form span {
+        background-color: #363b41;
+        border-radius: 3px 0px 0px 3px;
+        -moz-border-radius: 3px 0px 0px 3px;
+        -webkit-border-radius: 3px 0px 0px 3px;
+        color: #606468;
+        display: block;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 50px;
+    }
+    
+    #login form input {
+        height: 50px;
+        outline:none;
+    }
+    
+    #login form input[type="text"], input[type="password"] {
+        background-color: #3b4148;
+        border-radius: 0px 3px 3px 0px;
+        -moz-border-radius: 0px 3px 3px 0px;
+        -webkit-border-radius: 0px 3px 3px 0px;
+        color: #606468;
+        margin-bottom: 1em;
+        padding: 0 16px;
+        width: 198px;
+    }
+    
+    #login form input:focus {
+        color:#fff;
+    }
+    
+    #login form input[type="submit"] {
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        background-color: #0000ff;
+        color: #eee;
+        font-weight: bold;
+        margin-bottom: 2em;
+        text-transform: uppercase;
+        cursor:pointer;
+        width: 280px;
+    }
+    
+    .bar {
+        border-radius: 3px;
+        color: #eee;
+        font-weight: bold;
+        margin-bottom: 2em;
+        text-transform: uppercase;
+        width: 280px;
+    }
+    
+    #login form input[type="submit"]:hover {
+        background-color: #000080;
+    }
+    
+    #login > p {
+        text-align: center;
+    }
+    
+    #login > p span {
+        padding-left: 5px;
+    }
+    
+    
+      .bg {
+        background-color: white;
+      }
+      .pos1 {
+        position: relative;
+        right: 30px;
+      }
+      .pos2 {
+        position: relative;
+        bottom:  10px;
+      }
+      .pos3 {
+        position: relative;
+        right:  60px;
+      }
+      .pos4 {
+        position: relative;
+        right: 50px;
+      }
+      .pos5 {
+        position: relative;
+        bottom: 5px;
+      }
+      .pos6 {
+        position: relative;
+        left: 10px;
+      }
+      .pos7 {
+        position: relative;
+        left: 20px;
+      }
+      .pos8 {
+        position: relative;
+        bottom:  20px;
+      }
+      .pos9 {
+        position: relative;
+        right: 80px;
+      }
+      .my-primary {
+        background-color: darkcyan;
+        color: white;
+      }
+      main {
+      margin-top: 15px;
+      padding-top: 10px ;
+      }
+      html {
+          position: relative;
+          min-height: 100%;
+      }
+      body {
+          margin-bottom: 40px;
+      }
+      footer {
+          height: 40px;
+          position: absolute;
+          bottom: 0;
+          width: 100%;   
+      }
+      #connect{
+          position: relative;
+          left: 45px;
+      }
+      #connect1{
+          position:  absolute;
+          top: 130px;
+          left: 75px;
+          font: 18pt sans-serif;
+          border: 3px solid darkcyan;
+          width: 340px;
+          height: 45px;
+          background-color: lightblue;
+      }
+      .padd{
+          position: relative;
+          left: 30px;
+          padding: 5px;
+      }
+      table, th, tr, td
+      {
+          border:   1px solid black;
+          text-align: center;
+      }
+      .padding {
+        padding: 5px;
+      }
+      .paddingtop {
+        padding-top: 10px;
+      }
+      .shrift {
+        font-size: 1.1em;
+        font: Times New Roman;
+        color: #2c3338;
+        
+        white-space: nowrap;
+      }
+       
+      .nowrap {
+        white-space: nowrap;
+      } 
+      .mar {
+        min-height: 10em;
+        display: table-cell;
+        vertical-align: middle
+      } 
+    </style>
+
+  </head>
+  <body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white flex-column flex-sm-row bd-navbar sticky-top bg" >
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div><p class="alert alert-primary text-primary font-weight-bold" > <%= I18n.t('kursovaia.naprava.per_acc')%></p></div>           
+        <div class="btn-group mr-auto">
+        </div>
+          <% if ($foo.Key == 0) %>
+            <%= form_with url: send_naprava_path do |f|%>
+              <%= f.submit "#{t('kursovaia.naprava.send')}", class: "btn btn-outline-primary pos2 pos9"%>
+            <% end %>
+          <% else %>
+            <button type="button" class="btn btn-outline-primary  pos2 pos9 disabled">
+              <%= t('kursovaia.naprava.send') %>
+            </button>
+          <% end %>
+        <%= link_to "#{I18n.t('kursovaia.naprava.acc')}", view_path, class: "btn btn-outline-primary pos2 pos3" %>
+        <span id="current_date_time_block" class="alert alert-primary text-primary mt pos1" > </span>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle pos2" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= I18n.t("kursovaia.naprava.ch_lan") %>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-sm">
+            <% I18n.available_locales.each do |locale|%>
+              <li>
+                <%= link_to t(locale), spravka_path(locale: locale), class: 'dropdown-item', type: 'button' %>
+              </li>
+            <% end %>
+          </ul>
+        </div>         
+      </div>
+    </nav>
+
+    <script type="text/javascript">
+      
+      /* функция добавления ведущих нулей */
+      /* (если число меньше десяти, перед числом добавляем ноль) */
+      function zero_first_format(value)
+      {
+          if (value < 10)
+          {
+              value='0'+value;
+          }
+          return value;
+      }
+
+      /* функция получения текущей даты и времени */
+      function date_time()
+      {
+          var current_datetime = new Date();
+          var day = zero_first_format(current_datetime.getDate());
+          var month = zero_first_format(current_datetime.getMonth()+1);
+          var year = current_datetime.getFullYear();
+          var hours = zero_first_format(current_datetime.getHours());
+          var minutes = zero_first_format(current_datetime.getMinutes());
+          var seconds = zero_first_format(current_datetime.getSeconds());
+
+          return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+      }
+
+      /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+      setInterval(function () {
+        document.getElementById('current_date_time_block').innerHTML = date_time();
+      }, 1000);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  </header>
+  <!-- <main></main> -->
+  
+    <main class="container pos8" role="main">
+    <% @subjects.each do |subject| %>
+      <% if (subject.student_id == $foo.id) and ( (subject.Evaluation == "Не аттестован") or (subject.Evaluation == "Неудовлетворительно") or (subject.Evaluation == "Не зачтено") )%>
+        <div class="row">
+            <div class="col-3"> </div>
+
+            <div class="col-6 badge bg-primary text-wrap fs-3 bar"> 
+            
+            <font size="3px" color="white"> <%= I18n.t('kursovaia.naprava.napr')%> № ИУ </font>
+
+            </div>
+
+            <div class="col-3"> </div>  
+        </div>
+        <div class="row pos8">
+            <div class="col-1"> </div>
+            <div class="padding shrift col-10 text-nowrap"> Дата выдачи: 12.03.2023г. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspДействительно до 18 марта</div>
+            <div class="col-1"> </div>
+        </div>
+
+        <div class="row pos8">
+            <div class="col-1"> </div>
+            <div class="padding shrift col-10 text-nowrap">Аттестующая кафедра: <ins> <%= $foo.FacultyName %> </ins> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspЗаведующий кафедрой: Пролетарский А.В.</div>
+            <div class="col-1"> </div>
+        </div>
+
+        <div class="row pos8">
+            <div class="col-1"> </div>
+            <div class="padding shrift col-10 text-nowrap">Студент &nbsp<ins><%=$foo.LastName%>&nbsp<%=$foo.FirstName%>&nbsp<%=$foo.Patronymic%></ins>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspГруппа: <ins><%=$foo.FacultyName%>-<%=$foo.GroupName%></ins></div>
+            <div class="col-1"> </div>
+        </div>
+
+        <div class="row pos8">
+            <div class="col-1"> </div>
+            <div class="padding shrift col-10 text-nowrap">направляется деканатом факультета <ins><%=$foo.FacultyName%></ins> для сдачи зачета/экзамена по дисциплине <ins><%= subject.SubjectName%></ins> </div>
+            <div class="col-1"> </div>
+        </div>
+
+        <div class="row pos8">
+            <div class="col-1"> </div>
+            <div class="col-10 shrift padding"> 
+                <p> Декан факультета  <ins><%=$foo.FacultyName%></ins> &nbsp&nbsp&nbsp&nbsp     <ins>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</ins>            /Пролетарский А.В./ </p>
+            </div>
+            <div class="col-1"> </div>
+        </div>
+
+        <div class="row pos8">
+            <div class="col-1"> </div>
+            <div class="col-10 shrift padding"> 
+                <p> Преподавателю <ins>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</ins>принять экзамен/зачёт </p>
+            </div>
+            <div class="col-1"> </div>
+            </div>
+    
+
+        <div class="row padding"> </div>
+        <div class="row pos8">
+            <div class="col-12">
+                <table class="padding shrift">
+                <tr>
+                    <td width="15%">Дисциплина</td>
+                    <td  class="padding" colspan="2"> Оценка </td>
+                    <td width="20%" class="padding"> Дата сдачи зачета/экзамена</td>
+                    <td  class="padding" width="15%" > Подпись </td>
+                    <td  class="padding" width="20%"> ФИО преподавателя </td>
+                </tr>
+                <tr>
+                    <td class="padding mar" rowspan="7"> <ins> <%= subject.SubjectName%></ins></td>
+                    <td class="padding"> Н/А </td>
+                    <td > </td>
+                    <td rowspan="3" width="41%" >  </td>
+                    <td rowspan="7">  </td>
+                    <td rowspan="7">  </td>
+                </tr>
+                <tr>
+                    <td class="padding"> зачтено </td>
+                    <td width="5%">&nbsp </td>
+                </tr>
+                <tr>
+                    <td class="padding"> не зачтено </td>
+                    <td > &nbsp</td>
+                </tr>
+                <tr>
+                    <td class="padding"> отлично </td>
+                    <td > &nbsp</td>
+                    <td rowspan="4" width="41%" > Оценка </td>
+                </tr>
+                <tr>
+                    <td class="padding"> хорошо </td>
+                    <td >&nbsp</td>
+                </tr>
+                <tr>
+                    <td class="padding"> удовл. </td>
+                    <td > &nbsp</td>
+                </tr>
+                <tr>
+                    <td class="padding"> неудовл. </td>
+                    <td > &nbsp</td>
+                </tr>
+                </table>      
+            </div>
+        </div>
+      <% end %>
+    <% end %> 
+    </main>
+
+  <script type="text/javascript">
+      
+      /* функция добавления ведущих нулей */
+      /* (если число меньше десяти, перед числом добавляем ноль) */
+      function zero_first_format1(value)
+      {
+          if (value < 10)
+          {
+              value='0'+value;
+          }
+          return value;
+      }
+
+      /* функция получения текущей даты и времени */
+      function date_time1()
+      {
+          var current_datetime = new Date();
+          var day = zero_first_format1(current_datetime.getDate());
+          var month = zero_first_format1(current_datetime.getMonth()+1);
+          var year = current_datetime.getFullYear();
+          
+
+          return day+"."+month+"."+year;
+      }
+
+      /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+      document.getElementById('current_date_time').innerHTML = date_time1();
+
+    </script>
+  </body>
+</html>

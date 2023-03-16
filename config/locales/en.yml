@@ -1,0 +1,46 @@
+en:
+  en: English
+  ru: Russian
+  error: "Invalid username and/or password!"
+  lang:
+    english: "English"
+    russian: "Russian"
+  kursovaia:
+    input:
+      entry: "Login"
+      per_acc: "Personal account"
+      login: "Login"
+      password: "Password"
+      hello: "Hello world"
+    view:
+      per_acc: "Personal account"
+      group: "GROUP"
+      exit: "Exit"
+      ch_lan: "Change language"
+      ch_doc: "SELECT DOCUMENT:"
+      naprava: "Statement"
+      otchet: "Report"
+      spravka: "Reference"
+      mark: "ACADEMIC GRADE"
+      sub: "Subject"
+      eva: "Evaluation"
+    otchet:
+      ch_lan: "Change language"
+      acc: "Account"
+      per_acc: "Personal account"
+      stud: "STUDENT PROGRESS REPORT"
+      sub: "Subject"
+      eva: "Evaluation"
+      send: "Send document"
+    spravka:
+      ch_lan: "Change language"
+      per_acc: "Personal account"
+      sprav: "CERTIFICATE OF STUDY AT BMSTU"
+      acc: "Account"
+      send: "Send document"
+    naprava:
+      ch_lan: "Change language"
+      per_acc: "Personal account"
+      acc: "Account"
+      napr: "INDIVIDUAL STATEMENT"
+      send: "Send document"
